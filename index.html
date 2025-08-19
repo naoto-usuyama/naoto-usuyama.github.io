@@ -1,91 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naoto Usuyama - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Naoto Usuyama</title>
+  <meta name="description" content="Naoto Usuyama" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <h1 class="logo">Naoto Usuyama</h1>
-                <ul class="nav-menu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+  <div class="wrapper">
+    <header class="site-header">
+      <div class="profile-column">
+        <img src="assets/img/naoto_usuyama_presentation.jpeg" alt="Naoto Usuyama speaking at a conference" class="profile-pic" />
+        <ul class="social" aria-label="Social links">
+          <li>
+            <a href="https://scholar.google.com/citations?user=uWV0zuYAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M12 3 3 9l9 6 7.5-5V14h1.5V9L12 3Zm0 13L5 11v2l7 5 7-5v-2l-7 5Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/naoto-usuyama" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5.001 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7.5 0h3.83v1.71h.05c.53-.96 1.82-1.97 3.74-1.97 4 0 4.73 2.63 4.73 6.05V21h-4v-4.78c0-1.14-.02-2.6-1.59-2.6-1.6 0-1.84 1.25-1.84 2.52V21h-4V9Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/naotous" target="_blank" rel="noopener" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M17.53 3h3.3l-7.2 8.23L22.5 21h-6.3l-4.94-6.45L5.5 21H2.2l7.7-8.8L1.8 3h6.4l4.47 5.86L17.53 3Zm-1.11 15.98h1.83L7.65 4.94H5.7l10.72 14.04Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:usuyama.naoto@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.01L12 13l9-5.99V7H3Zm0 2.8V17h18V9.8l-8.37 5.56a1.5 1.5 0 0 1-1.66 0L3 9.8Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="intro">
+        <h1>Naoto Usuyama</h1>
+        <div class="bio" aria-label="Biography">
+    <p>I'm a <a href="https://www.microsoft.com/en-us/research/people/naotous/" target="_blank" rel="noopener" class="microsoft-link">Principal Researcher</a> at <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener" class="microsoft-link">Microsoft Research</a>.</p>
+    <p>I focus on creating AI models to advance humanity's health and productivity. I work on whatever blockers stand in the way of scaling and progress — whether in modeling, data, infrastructure, or teams.
+    <p>Born and raised in Kamakura and Tokyo, Japan; now based near Seattle (Sammamish) with my lovely wife and daughter.</p>
+  </div>
+      </div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h2>Welcome to My Personal Website</h2>
-                <p>I'm a passionate developer creating innovative solutions</p>
-                <a href="#about" class="cta-button">Learn More About Me</a>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! I'm Naoto Usuyama, a developer passionate about creating meaningful digital experiences. 
-                   I enjoy working on projects that challenge me to learn and grow.</p>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>Software Engineering</li>
-                        <li>Problem Solving</li>
-                        <li>Team Collaboration</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of your first project goes here.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of your second project goes here.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Description of your third project goes here.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>I'd love to hear from you! Feel free to reach out.</p>
-                <div class="contact-info">
-                    <p>Email: your.email@example.com</p>
-                    <p>GitHub: <a href="https://github.com/naotousuyama" target="_blank">github.com/naotousuyama</a></p>
-                    <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn Profile</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Naoto Usuyama. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <p>&copy; <span id="year"></span> Naoto Usuyama</p>
         </div>
+      </div>
     </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

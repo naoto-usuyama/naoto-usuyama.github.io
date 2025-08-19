@@ -1,2 +1,2 @@
 # naotousuyama.github.io
-# naotousuyama.github.io
+private mirror
