@@ -42,10 +42,10 @@ body {
 header.site-header {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem clamp(1.5rem, 5vw, 4rem);
+  gap: 1.5rem clamp(1.5rem, 5vw, 4rem);
   align-items: flex-start;
-  padding-bottom: 2.2rem;
-  margin-bottom: 2.8rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
   width: 100%;
   box-sizing: border-box;
   min-width: 0;
@@ -53,10 +53,10 @@ header.site-header {
 
 /* Profile / intro columns (enhanced on wider screens) */
 .profile-column { flex: 0 0 auto; display: flex; flex-direction: column; gap: 1.05rem; align-items: flex-start; min-width: 180px; }
-.intro { flex: 1 1 560px; min-width: 280px; }
+.intro { min-width: 280px; } /* flex: 1 1 560px; */
 
 @media (min-width: 860px) {
-  header.site-header { display: grid; grid-template-columns: 220px 1fr; gap: 3.2rem clamp(2.5rem, 5vw, 4.5rem); }
+  header.site-header { display: grid; grid-template-columns: 240px 1fr; gap: 3.2rem clamp(2.5rem, 5vw, 4.5rem); }
   .profile-column { position: sticky; top: 1.25rem; align-self: start; }
   .profile-column .social { flex-direction: row; width: 220px; justify-content: space-between; }
   .profile-column .social a { width: 100%; justify-content: center; }
@@ -80,19 +80,18 @@ h1 { font-size: clamp(2.1rem, 4.5vw, 3.25rem); line-height: 1.1; margin: 0 0 .75
 .bio p { margin: 0 0 1.05rem; }
 .bio p:last-child { margin-bottom: 0; }
 
-/* Microsoft Research link styling */
-.microsoft-link {
+a {
   color: #0078d4; /* Microsoft blue that complements the current scheme */
   text-decoration: none;
   transition: color 0.25s ease, text-decoration 0.25s ease;
 }
 
-.microsoft-link:hover {
+a:hover {
   color: #106ebe; /* Darker blue on hover */
   text-decoration: underline;
 }
 
-.microsoft-link:focus-visible {
+a:focus-visible {
   outline: 2px solid #0078d4;
   outline-offset: 2px;
 }
@@ -143,21 +142,33 @@ h1 { font-size: clamp(2.1rem, 4.5vw, 3.25rem); line-height: 1.1; margin: 0 0 .75
 /* Remove old text spacing if any spans remain */
 .social span { display: none; }
 
-section#work { margin-top: 1rem; }
-section#work h2 { font-size: 1.5rem; font-weight: 600; margin: 0 0 1.2rem; letter-spacing: .5px; }
+section#work {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
 
 .grid {
   --min: 260px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr));
-  gap: 1.6rem;
-  align-items: start;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem; /* tighter space to make items feel wider */
+  align-items: stretch;
 }
 
-.card {
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+}
+
+@media (min-width: 980px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+}
+
+figure.card {
   background: #fff;
   border: 1px solid var(--border);
   padding: .9rem .95rem 1.1rem;
+  margin: 0;
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
@@ -166,23 +177,25 @@ section#work h2 { font-size: 1.5rem; font-weight: 600; margin: 0 0 1.2rem; lette
   overflow: hidden;
   transition: border-color .25s ease, box-shadow .25s ease;
 }
-.card:hover { border-color: #d0cdc5; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); }
-.card img {
+figure.card:hover { border-color: #d0cdc5; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); }
+figure.card img {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-fit: contain;
   border-radius: 4px;
   background: #f4f2ee;
 }
-.card h3 { margin: 0; font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
-.card p { margin: 0; font-size: .85rem; color: #555; line-height: 1.4; }
+/*figure.card figcaption { display: flex; flex-direction: column; gap: .35rem; }*/
+figure.card h3 { margin: 0; font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
+figure.card p { margin: 0; font-size: .9rem; color: #555; line-height: 1.5; }
 
 footer { margin-top: 4rem; font-size: .75rem; padding: 2.5rem 0 1.5rem; text-align: center; border-top: 1px solid var(--border); }
 
 /* Enhanced footer styling */
 .site-footer {
-  margin-top: 0.5rem;
-  padding: 2.5rem 0 1.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
   border-top: 1px solid var(--border);
 }
 
@@ -227,7 +240,7 @@ footer { margin-top: 4rem; font-size: .75rem; padding: 2.5rem 0 1.5rem; text-ali
     flex-direction: column;
     gap: 1.75rem;
     align-items: center;
-    padding-bottom: 1.8rem;
+    padding-bottom: 0rem;
     width: 100%;
     box-sizing: border-box;
   }
